@@ -6,7 +6,6 @@ const SPEED = 350
 const JUMPFORCE = -1100
 const GRAVITY = 35
 
-# warning-ignore:unused_argument
 func _physics_process(delta):
 	
 	if Input.is_action_pressed("ui_right"):
@@ -15,10 +14,10 @@ func _physics_process(delta):
 		velocity.x = -SPEED
 
 	else:
-		pass #idle animation
+		pass # idle animation should be given here
 		
 	if not is_on_floor():
-		pass #jump animation
+		pass # jump animation should be given here
 
 	velocity.y = velocity.y + GRAVITY
 	
